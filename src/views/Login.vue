@@ -59,13 +59,13 @@ export default {
       getCodeText: "获取验证码"
     };
   },
-  beforeRouteLeave(to, from, next) {
-    if (window.localStorage.getItem(TOKEN_KEY)) {
-      next();
-    } else {
-      next({ path: "/login" });
-    }
-  },
+  // beforeRouteLeave(to, from, next) {
+  //   if (window.localStorage.getItem(TOKEN_KEY)) {
+  //     next();
+  //   } else {
+  //     next({ path: "/login" });
+  //   }
+  // },
   created() {
     this.winH = window.innerHeight + "px";
     window.localStorage.clear();
