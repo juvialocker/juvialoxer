@@ -124,42 +124,42 @@ export default {
       }
     },
     handleSubmit() {
-      // this.$router.push({
-      //   name: "home"
-      // });
-      this.$refs.formInline.validate(valid => {
-        if (valid) {
-          let params = {};
-          params.phone = this.formInline.user;
-          params.code = this.formInline.password;
-
-          service
-            .login(params)
-            .then(res => {
-              let status = res.status;
-              let type = res.message.Jurisdiction.type;
-              if (status == 200 && type === "admin") {
-                // this.$Message.success("登录成功");
-                window.localStorage.setItem("username", res.message.userName);
-                setTimeout(() => {
-                  this.$Message.warning("还没有页面可以调整哟");
-                  // this.$router.push({
-                  //   name: "home"
-                  // }),
-                }, 2000);
-              } else if (status == 200 && type !== "admin") {
-                this.$Message.error("您非当前系统管理员，请重新登录");
-              } else {
-                this.$Message.error("用户名或验证码错误");
-              }
-            })
-            .catch(error => {
-              this.$Message.error("用户名或验证码错误");
-            });
-        } else {
-          return false;
-        }
+      this.$router.push({
+        name: "home"
       });
+      // this.$refs.formInline.validate(valid => {
+      //   if (valid) {
+      //     let params = {};
+      //     params.phone = this.formInline.user;
+      //     params.code = this.formInline.password;
+
+      //     service
+      //       .login(params)
+      //       .then(res => {
+      //         let status = res.status;
+      //         let type = res.message.Jurisdiction.type;
+      //         if (status == 200 && type === "admin") {
+      //           // this.$Message.success("登录成功");
+      //           window.localStorage.setItem("username", res.message.userName);
+      //           setTimeout(() => {
+      //             this.$Message.warning("还没有页面可以调整哟");
+      //             // this.$router.push({
+      //             //   name: "home"
+      //             // }),
+      //           }, 2000);
+      //         } else if (status == 200 && type !== "admin") {
+      //           this.$Message.error("您非当前系统管理员，请重新登录");
+      //         } else {
+      //           this.$Message.error("用户名或验证码错误");
+      //         }
+      //       })
+      //       .catch(error => {
+      //         this.$Message.error("用户名或验证码错误");
+      //       });
+      //   } else {
+      //     return false;
+      //   }
+      // });
     }
   }
 };

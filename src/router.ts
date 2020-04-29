@@ -13,15 +13,11 @@ export default new Router({
     {
       path: '/',
       component: MainLayout,
-      redirect: { name: 'home-prize' },
-      // children: [
-      //   require('./views/Home/router').default,
-      //   require('./views/Market/router').default,
-      //   require('./views/Channel/router').default,
-      //   // require('./views/Transport/router').default,
-      //   require('./views/Customer/router').default,
-      //   require('./views/Management/router').default,
-      // ],
+      redirect: { name: 'home' },
+      children: [
+        require('./views/home/router').default,
+        // require('./views/Market/router').default,
+      ],
     },
     {
       path: '/login',

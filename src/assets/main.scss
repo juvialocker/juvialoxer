@@ -1,11 +1,15 @@
 $primary:#CC302D;
 
-//menu
-// .ivu-menu-light.ivu-menu-horizontal .ivu-menu-item-active{
-//   color:$primary;
-//   border-bottom:2px solid $primary;
-// }
 
+.ivu-row-flex{
+  height: 100%;
+}
+.ivu-menu-vertical .ivu-menu-item,
+.ivu-menu-vertical .ivu-menu-submenu-title{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
 // 修改实物兑奖预览图片
 .viewer-canvas img{
   // transform: scale(0.7) rotate(0deg) !important;
@@ -55,56 +59,6 @@ body{
 
 .ivu-upload-list {
   margin-top: 0 !important;
-}
-
-.allBtn {
-  width: 100px;
-  height: 36px;
-  background: linear-gradient(90deg, rgba(232, 94, 89, 1) 0%, rgba(204, 48, 45, 1) 100%);
-  border-radius: 18px;
-  color: #fff;
-  padding: 11px 36px;
-  // margin-left: 20px;
-  cursor: pointer;
-}
-
-.cash .ivu-select-selection,
-.metter .ivu-select-selection,
-.amountDetail .ivu-select-selection,
-.toolheader .ivu-select-selection,
-.toolbar .ivu-select-selection,
-.fenceTime .ivu-select-selection,
-#stock .ivu-select-selection {
-  height: 36px;
-  text-align: center;
-  // line-height: 36px;
-}
-
-.cash .ivu-select-input,
-.metter .ivu-select-input,
-.amountDetail .ivu-select-input,
-.toolheader .ivu-select-input,
-.toolbar .ivu-select-input,
-.fenceTime .ivu-select-input,
-#stock .ivu-select-input {
-  height: 36px;
-  padding: 0 18px;
-}
-
-.amountDetail .ivu-select-placeholder,
-.amountDetail .ivu-select-selected-value,
-.toolheader .ivu-select-placeholder,
-.toolheader .ivu-select-selected-value,
-.toolbar .ivu-select-placeholder,
-.toolbar .ivu-select-selected-value,
-.fenceTime .ivu-select-placeholder,
-.fenceTime .ivu-select-selected-value,
-#stock .ivu-select-placeholder,
-#stock .ivu-select-selected-value {
-  text-align: left !important;
-  height: 36px !important;
-  line-height: 36px !important;
-  padding: 0 18px !important;
 }
 
 .ivu-layout-content {
@@ -393,5 +347,25 @@ th .ivu-table-cell {
   }
 }
 
+// 导航栏样式
+.ivu-layout-content .ivu-layout-sider-children,
+.ivu-menu-light{
+  background-color: #262A31;
+}
+.ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item{
+  color: #fff;
+}
 
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu){
+  background-color: #00A9FA;
+  height: 54px;
+}
+
+.ivu-select-single .ivu-select-selection .ivu-select-placeholder, .ivu-select-single .ivu-select-selection .ivu-select-selected-value{
+  text-align: center;
+}
+.ivu-breadcrumb-item-separator {
+  color: #000;
+  padding: 0 5px;
+}
 @media screen and (min-width:1366px) {}
