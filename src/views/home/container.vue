@@ -88,6 +88,9 @@ export default class Container extends Vue {
 }
 </script>
 <style lang="scss" scoped>
+// .container-content{
+  // min-width: 1000px;
+// }
 .layout {
   border: 1px solid #d7dde4;
   background: #f5f7f9;
