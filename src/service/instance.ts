@@ -97,15 +97,21 @@ axiosInstance.interceptors.response.use((response) => {
       onCancel: () => {
       },
     });
-  } else if (error.response.status !== 500) {
-    // tslint:disable-next-line:no-any
+  } else if (error.response && error.response.status !== 401) {
     (Modal as any).warning({
       title: '警告',
-      content: '<p>后台网络错误,请稍后再试</p>',
-      // tslint:disable-next-line:no-empty
+      content: `<p>后台网络错误${error.response.status}，请稍后再试！</p>`,
       onOk: () => {
       },
-      // tslint:disable-next-line:no-empty
+      onCancel: () => {
+      },
+    });
+  }else {
+    (Modal as any).warning({
+      title: '警告',
+      content: `<p>后台网络错误，请稍后再试！</p>`,
+      onOk: () => {
+      },
       onCancel: () => {
       },
     });
