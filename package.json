@@ -32,7 +32,7 @@
     "@vue/cli-service": "^3.7.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.13.1",
     "rollup": "^1.12.4",
     "rollup-plugin-node-resolve": "^5.0.0",
     "rollup-plugin-uglify": "^6.0.2",
