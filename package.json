@@ -14,7 +14,7 @@
     "iview": "^3.4.1",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-plain-loader": "^1.0.0",
     "reflect-metadata": "^0.1.13",
     "smooth-scrollbar": "^8.4.0",
